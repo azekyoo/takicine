@@ -2,16 +2,16 @@
 
 Ici, tu trouvera tout ce dont tu as besoin pour faire un beau front (un backend et une API)
 
-## Etape 1: cloner le projet
+### Etape 1: cloner le projet
 Place toi dans le repertoire de ton choix sur ton ordinateur et ouvre une interface de commande. </br>
 Tape la commande suivante : 
 ```
 git clone git@gitlab.takima.io:school/formation-angular/angular-lab.git
 ```
-## Etape 2: Ouvre le projet dans l'IDE de ton choix
+### Etape 2: Ouvre le projet dans l'IDE de ton choix
 *On te conseille d'utiliser ***Intellij***, il est très complet*
 
-## Etape 3: Lance le projet
+### Etape 3: Lance le projet
 Dans le terminal de Intellij lance la commande suivante
 ```
 docker compose up
