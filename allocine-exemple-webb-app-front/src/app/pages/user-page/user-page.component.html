@@ -1,0 +1,45 @@
+<div class="container" xmlns="http://www.w3.org/1999/html">
+    <div class="row">
+        <div>
+            <h1>Mon profil</h1>
+        </div>
+        <div class="ml-auto p-2">
+            <button class="btn btn-warning" (click)="newReview()" >Nouvel avis</button>
+            <button type="button" class="btn btn-outline-warning ml-2" (click)="redirectReview(userId)">Modifier mes avis</button>
+            <button type="button" class="btn btn-secondary ml-2" (click)="redirectInfos()">Modifier mes infos</button>
+            <button class="btn btn-danger ml-2" (click)="logout()" >Déconnexion</button>
+        </div>
+    </div>
+    <div class="row">
+        <ul>
+        <h3>Mes infos : </h3>
+        <li class="justify-content-around"><p>Nom : <strong>{{user.lastName}}</strong> Prénom : <strong>{{user.firstName}}</strong></p></li>
+       <li class="justify-content-around"><p>Age : <strong>{{user.age}}</strong> Email : <strong>{{user.email}}</strong></p></li>
+        <li class="justify-content-around"><p>Points fidelités : <strong>{{user.points}}</strong></p></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div *ngFor="let film of films" class="col-4">
+            <div class="card shadow" style="width: 18rem;">
+                <img *ngIf="film.image" src="http://localhost:8080/movies/{{film.id}}/image" class="card-img-top"
+                     alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{film.title}}</h5>
+                    <p class="card-text">{{film.synopsis}}</p>
+                    <div *ngFor="let avis of reviews" class="col">
+                        <div *ngIf="film.id == avis.movie.id">
+                            <div>
+                                <h5 class="rate">Note : {{avis.rate}}</h5>
+                                <h5>{{avis.text}}</h5>
+                                <h6>{{avis.reviewDate | date: "dd/MM/yyyy"}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

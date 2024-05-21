@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 text-center">
+            <h2 class="titre pt-4">Tout ses avis</h2>
+            <p class="soustitre">Pour te donner envie. </p>
+        </div>
+        <div class="col-xl-7 col-lg-8 col-md-10 col-12 text-center mb-5">
+            <div class="card mb-3" *ngFor="let review of reviews">
+                <div class="row justify-content-left d-flex">
+                    <div class="col-md-4 d-flex flex-column">
+                        <div class="rating-box">
+                            <h1 class="pt-4">{{review.rate}}</h1>
+                            <p class="">sur 5</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{review.user.firstName}} {{review.user.lastName}}</h5>
+                            <p class="card-text">{{review.text}}</p>
+                            <p class="card-text"><small
+                                    class="text-muted">Le {{review.reviewDate| date: "dd/MM/yyyy"}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

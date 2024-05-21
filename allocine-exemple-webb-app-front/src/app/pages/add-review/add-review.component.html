@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="w-100 d-flex justify-content-end mt-1">
+                <button class="btn btn-secondary" (click)="redirectListAvisCo()">Mes avis</button>
+            </div>
+            <h2 *ngIf="onAddPage">Nouvel avis</h2>
+            <h2 *ngIf="!onAddPage">Modification avis</h2>
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div class="form-group">
+                    <label for="note">Note</label>
+                    <select [(ngModel)]="noteSelected" name="noteSelect" id="note" class="ml-2">
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="texte">
+                        Texte
+                    </label>
+                    <input type="text" id="texte" class="form-control" name="texte" [ngModel]="review.text">
+                </div>
+                <div class="form-group">
+                  @if (onAddPage) {
+                    <label for="film">
+                      Film à noter
+                    </label>
+                    <div class="form-group" id="film">
+                      <select [(ngModel)]="movieSelected" name="filmId">
+                        <option *ngFor="let movie of movies" [ngValue]="movie">{{movie.title}}</option>
+                      </select>
+                    </div>
+                  } @else {
+                    <div class="mb-2">
+                    <span>Film : </span>
+                    <span>{{movieSelected.title}}</span>
+                    </div>
+                  }
+                </div>
+
+                <div *ngIf="addAvisValide == true" class="alert alert-danger" role="alert">
+                    <p>
+                    Vous avez déjà saisi un avis pour ce film !
+                </div>
+                <button *ngIf="onAddPage" class="btn btn-warning" type="submit" >Ajouter</button>
+                <button *ngIf="!onAddPage" class="btn btn-warning" type="submit">Modifier</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

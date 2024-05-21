@@ -1,0 +1,20 @@
+
+<h2>Graphiques :</h2><br/>
+<div class="row w-100 mx-auto">
+    <div [hidden]="!chart" class="col-6">
+
+        <canvas id="canvas0">
+            {{chart}}
+        </canvas>
+    </div>
+
+    <div [hidden]="!chart2" class="col-6">
+        <select [ngModel]="yearSelected" (ngModelChange)="valueSelectedChange($event)">
+            <option *ngFor="let i of years" [value]="i">{{i}}</option>
+        </select>
+        <canvas id="canvas1">
+            {{chart2}}
+        </canvas>
+    </div>
+</div>
+

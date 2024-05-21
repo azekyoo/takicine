@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="w-100 d-flex justify-content-end mt-1">
+            <a class="btn btn-secondary" [routerLink]="['/list-films']">Retour liste</a>
+            </div>
+          @if (onAddPage) {
+            <h2>Nouveau film</h2>
+          } @else {
+            <h2 >Modification film</h2>
+          }
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div class="form-group">
+                    <label for="title">
+                        Titre
+                    </label>
+                    <input type="text" id="title" class="form-control" name="title"  [ngModel]="film.title">
+                </div>
+                <div class="form-group">
+                    <label for="director">
+                        Réalisateur
+                    </label>
+                    <input type="text" id="director" class="form-control" name="director" [ngModel]="film.director">
+                </div>
+                <div class="form-group">
+                    <label for="releaseDate">
+                        Date de Sortie
+                    </label>
+                    <input type="date" id="releaseDate" class="form-control" name="releaseDate" [ngModel]="film.releaseDate">
+                </div>
+                <div class="form-group">
+                    <label for="synopsis">
+                        Synopsis
+                    </label>
+                    <input type="text" id="synopsis" class="form-control" name="synopsis" [ngModel]="film.synopsis">
+                </div>
+              @if (onAddPage) {
+                <button class="btn btn-warning" type="submit">Ajouter</button>
+              } @else {
+                <button class="btn btn-warning" type="submit">Modifier</button>
+              }
+            </form>
+        </div>
+    </div>
+</div>
+
+

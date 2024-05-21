@@ -1,0 +1,16 @@
+form{
+    margin-top: 10%;
+}
+
+.connexion{
+    width: 290px;
+    font-weight: bold;
+}
+.subtitle{
+    font-style: italic;
+}
+
+.icp{
+    text-decoration: none;
+    color : #FECC00;
+}

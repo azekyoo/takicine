@@ -1,0 +1,31 @@
+<div class="container w-25">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12 text-center">
+      <h2 class="titre pt-4">Connecte-toi ! </h2>
+      <p class="soustitre">En 1 clic. </p>
+    </div>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="mt-1">
+      <div class="form-group">
+        <label for="email">
+          Email
+        </label>
+        <input type="text" id="email" class="form-control" name="email" placeholder="Enter your email" ngModel>
+      </div>
+
+      <div class="row justify-content-center align-items-center">
+        <button class="btn btn-warning connexion mt-3" type="submit">Se connecter</button>
+        <div class="col-12 text-center mt-2">
+          Pas de compte ? <a class="icp" [routerLink]="['/add-user']">Inscris-toi !</a>
+        </div>
+      </div>
+    </form>
+
+
+  </div>
+
+</div>
+<div class="col-12 mb-5">
+  <div class="sorcière">
+    <img src="/assets/sorciere.gif"/>
+  </div>
+</div>
