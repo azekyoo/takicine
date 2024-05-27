@@ -4,7 +4,7 @@ services:
     image: app:latest
     build:
         context: allocine-exemple-webb-app
-        dockerfile: allocine-exemple-webb-app/Dockerfile
+        dockerfile: Dockerfile
     depends_on:
       database:
         condition: service_healthy
