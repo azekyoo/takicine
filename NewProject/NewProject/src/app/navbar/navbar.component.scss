@@ -1,0 +1,42 @@
+/* Main Navbar */
+.navbar {
+  background-color: #ffe100; /* Light yellow background */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 1rem 2rem; /* Adjust padding for better spacing */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Dark gray for contrast */
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Navbar Links */
+.nav-item.nav-link {
+  color: #666; /* Medium gray text */
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth transition for hover */
+  margin-left: 20px; /* Space between links */
+}
+
+.nav-item.nav-link:hover {
+  color: #ffcc00; /* Bright yellow on hover */
+}
+
+/* Specific Margin for First Nav Link */
+.nav-item.nav-link:first-of-type {
+  margin-left: 0; /* Remove extra margin for the first item */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+  
+  .nav-item.nav-link {
+    margin-left: 10px; /* Reduce space between links */
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Example</title>
+  <style>
+    /* Main Navbar */
+    .navbar {
+      background-color: #ffcc00; /* Bright yellow background */
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+      padding: 1rem 2rem; /* Adjust padding for better spacing */
+    }
+
+    /* Navbar Brand */
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333; /* Dark gray for contrast */
+      transition: color 0.3s ease; /* Smooth transition for hover */
+      display: flex; /* Make the brand a flex container */
+      align-items: center; /* Align items vertically */
+    }
+
+    /* Navbar Links */
+    .nav-item.nav-link {
+      color: #333; /* Dark gray text for contrast */
+      font-weight: 500;
+      transition: color 0.3s ease; /* Smooth transition for hover */
+      margin-left: 20px; /* Space between links */
+    }
+
+    .nav-item.nav-link:hover {
+      color: #ffffff; /* White color on hover for better visibility */
+    }
+
+    /* Specific Margin for First Nav Link */
+    .nav-item.nav-link:first-of-type {
+      margin-left: 0; /* Remove extra margin for the first item */
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 1rem; /* Reduce padding on smaller screens */
+      }
+      
+      .nav-item.nav-link {
+        margin-left: 10px; /* Reduce space between links */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-light navbar-expand ps-5">
+  <img src="https://altea-informatique.fr/source/allocine.png" alt="Logo" width="70" height="70" class="me-2"> <!-- Add the image before the title -->
+  <a class="navbar-brand">{{ title }}</a>
+  <a class="nav-item nav-link" routerLink="/">Accueil</a>
+  <a class="nav-item nav-link ms-3" routerLink="/movies">Gestion de films</a>
+</nav>
+
+</body>
+</html>
