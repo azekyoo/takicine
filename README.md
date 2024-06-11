@@ -15,6 +15,7 @@ docker compose up
 ```
 Rends-toi sur le [swagger](http://localhost:8080/swagger-ui/index.html#/) de ton backend pour vérifier que tout fonctionne :) 
 
-
-
-
+Enfin, dans un autre terminal, lance
+```
+ng serve
+```
