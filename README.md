@@ -1,4 +1,4 @@
-# Bienvenue sur ce  repo :)
+# TakiCiné
 
 ### Etape 1: cloner le projet
 Place-toi dans le répertoire de ton choix et ouvre une interface de commande. </br>
